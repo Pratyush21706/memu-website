@@ -42,7 +42,7 @@ h6 {
   --color-black9: #292c35;
   --color-black10: rgb(51 55 66);
   --color-black11: #212121;
-  --color-yellow: #FFC701;
+  --color-yellow: #ffc701;
   --bs-body-font-family: system-ui, -apple-system, Segoe UI, Noto Sans, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji !important;
 }
 
@@ -1771,6 +1771,15 @@ body::-webkit-scrollbar-thumb,
 .dropdown-menu {
   border: none !important;
   width: 100%;
+  background-color: #ffa601;
+  color: white;
+  border-radius: 0 10px 10px 10px;
+
+}
+
+.dropdown-item{
+  color: #ffffff;
+  font-weight: 300;
 }
 
 .header_white_space {
@@ -2670,7 +2679,7 @@ code .btn {
 .explore .explore-effect {
   border-radius: 569.539px;
   opacity: 0.3;
-  background: #FFC701;
+  background: #ffc701;
   filter: blur(142.1499938965px);
   width: 570px;
   height: 570px;
@@ -2689,7 +2698,7 @@ code .btn {
   flex-shrink: 0;
 }
 .explore .explore_inner {
-  border-bottom: solid 1px #C0C0C0;
+  /* border-bottom: solid 1px #C0C0C0; */
 }
 .explore .explore_inner .services_chip {
   gap: 24px 16px;
@@ -2703,6 +2712,7 @@ code .btn {
   padding: 16px;
   gap: 12px;
   transition: all 0.5s ease-in-out;
+  width: 110%;
 }
 .explore .explore_inner .services_chip a:hover {
   box-shadow: 0px 6px 8px -2px rgba(33, 33, 33, 0.2), 0px 2px 8px -2px rgba(33, 33, 33, 0.04);
@@ -3029,7 +3039,7 @@ code .btn {
 .waw .waw-effect {
   border-radius: 376.891px;
   opacity: 0.36;
-  background: #FFC701;
+  background: #ffc701;
   filter: blur(140.1999969482px);
   flex-shrink: 0;
   width: 370px;
@@ -3659,6 +3669,9 @@ font-weight: 500;
       h3{
           font-size: 24px;
       }
+      img{
+        border-radius: 400px;
+      }
   }
   .pmg-team{
     display: grid;
@@ -3773,4 +3786,233 @@ flex-direction: column;
 }
 
 
+}
+
+/* General Layout */
+.main-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: fit-content; /* Dynamic height based on content */
+}
+
+.main-container .explore {
+  width: 20%;
+  background-color: #f4f4f44f;
+}
+
+.main-container .right-section {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-container .banner {
+  flex: 1;
+  background-color: #ffffff00;
+  margin-top: 40px;
+  height: 40vh;
+  position: relative; /* To position the "Tenders" container */
+}
+
+.main-container .services {
+  flex: 1;
+  background-color: #ffffff00;
+  margin-left: -20px;
+  border-radius: 15px;
+}
+
+.main-container .tenders {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  height: calc(40vh - 20px); /* Match banner height with some padding */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 15VW;
+  max-height: 30VH;
+  overflow-y: scroll;
+}
+
+.main-container .tenders-title {
+  font-family: 'Lexend Deca', sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  padding: 5px 10px;
+  background-color: #ffc701;
+  border-radius: 20px;
+  margin-bottom: 10px;
+}
+
+.main-container .tenders ul {
+  list-style: none;
+  padding: 5px;
+  padding-bottom: 10px;
+}
+
+.main-container .tenders ul li {
+  margin: 10px 0;
+}
+
+.main-container .tenders ul li a {
+  text-decoration: none;
+  color: #2f89ff;
+  font-weight: 100;
+  transition: color 0.3s;
+  border-bottom: #0A0032 ;
+
+}
+
+.main-container .tenders ul li a span {
+  text-decoration: none;
+  color: #ffc701;
+  font-weight: 500;
+  transition: color 0.3s;
+  border-bottom: #0A0032 ;
+
+}
+
+.main-container .tenders ul li a:hover {
+  color: #ffc701;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .main-container {
+    flex-direction: column; /* Stack sections on top of each other */
+  }
+
+  .main-container .explore,
+  .main-container .banner,
+  .main-container .services {
+    width: 100vw;
+    height: auto; /* Allow sections to take the natural height of their content */
+  }
+
+  .main-container .banner {
+    height: 25vh; /* Reduce banner height on smaller screens */
+    margin-top: 20PX;
+  }
+
+  .main-container .tenders {
+    position: static; /* Remove absolute positioning for better stacking */
+    height: auto; /* Adjust to content height */
+    max-width: 100%;
+    max-height: 20VH;
+    display: none;
+  }
+
+  .my-baby{
+    max-width: 100%;
+  }
+}
+
+
+/* Carousel Base Styles */
+.banner-carousel {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide {
+  min-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Tenders Section */
+.tenders {
+  position: absolute;
+  top: 20px;
+  right: 10px;
+  width: 20%;
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.tenders ul {
+  list-style: none;
+  padding: 0;
+}
+
+.tenders ul li {
+  margin: 8px 0;
+}
+
+.tenders ul li a {
+  text-decoration: none;
+  color: #0a0032;
+  font-weight: 500;
+}
+
+.tenders ul li a:hover {
+  color: #ffc701;
+}
+
+/* Navigation Arrows */
+.carousel-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  font-size: 18px;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.carousel-nav.prev {
+  left: 10px;
+}
+
+.carousel-nav.next {
+  right: 10px;
+}
+
+/* Indicator Dots */
+.carousel-indicators {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+}
+
+.carousel-indicators .dot {
+  width: 10px;
+  height: 10px;
+  background: #ddd;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.carousel-indicators .dot.active {
+  background: #ffc701;
 }
