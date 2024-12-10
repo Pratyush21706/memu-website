@@ -3757,7 +3757,7 @@
      height: 0;
      margin: var(--bs-dropdown-divider-margin-y) 0;
      overflow: hidden;
-     border-top: 1px solid var(--bs-dropdown-divider-bg);
+     /* border-top: 1px solid var(--bs-dropdown-divider-bg); */
      opacity: 1;
  }
  

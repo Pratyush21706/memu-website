@@ -233,109 +233,62 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
-document.addEventListener('DOMContentLoaded', () => {
-    const modal = document.querySelector('.image-modal');
-    const modalImg = document.querySelector('.image-modal img');
-    const closeBtn = document.querySelector('.image-modal .close');
-    const galleryItems = document.querySelectorAll('.gallery-item img');
-  
-    galleryItems.forEach((img) => {
-      img.addEventListener('click', () => {
-        modal.style.display = 'flex';
-        modalImg.src = img.src;
-      });
-    });
-  
-    closeBtn.addEventListener('click', () => {
-      modal.style.display = 'none';
-    });
-  
-    modal.addEventListener('click', (e) => {
-      if (e.target === modal) {
-        modal.style.display = 'none';
-      }
-    });
-  
-    // Gallery Scroll Navigation
-    const galleryRow = document.querySelector('.gallery-row');
-    const leftNav = document.querySelector('.gallery-nav.left');
-    const rightNav = document.querySelector('.gallery-nav.right');
-  
-    leftNav.addEventListener('click', () => {
-      galleryRow.scrollBy({
-        left: -200,
-        behavior: 'smooth',
-      });
-    });
-  
-    rightNav.addEventListener('click', () => {
-      galleryRow.scrollBy({
-        left: 200,
-        behavior: 'smooth',
-      });
-    });
-  });
-  
 
-  let currentSlide = 0;
-let isCarouselPaused = false;
+let currentSlide = 0;
 const slides = document.querySelectorAll(".carousel-slide");
 const dots = document.querySelectorAll(".dot");
 
-// Show a specific slide
-function showSlide(index) {
-  slides.forEach((slide, i) => {
-    slide.style.transform = `translateX(-${index * 100}%)`;
-    dots[i].classList.toggle("active", i === index);
+function updateSlides() {
+  slides.forEach((slide, index) => {
+    slide.classList.remove("active");
+    dots[index].classList.remove("active");
+
+    if (index === currentSlide) {
+      slide.classList.add("active");
+      dots[index].classList.add("active");
+    }
   });
-  currentSlide = index;
+
+  // Update the transform property for smooth transitions
+  const offset = currentSlide * -100;
+  document.querySelector(".carousel").style.transform = `translateX(${offset}%)`;
 }
 
 // Next Slide
 function nextSlide() {
-  if (!isCarouselPaused) {
-    showSlide((currentSlide + 1) % slides.length);
-  }
+  currentSlide = (currentSlide + 1) % slides.length;
+  updateSlides();
 }
 
 // Previous Slide
 function prevSlide() {
-  if (!isCarouselPaused) {
-    showSlide((currentSlide - 1 + slides.length) % slides.length);
-  }
+  currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+  updateSlides();
 }
 
 // Set a specific slide
 function setSlide(index) {
-  showSlide(index);
-}
-
-// Pause and Resume Carousel
-function pauseCarousel() {
-  isCarouselPaused = true;
-}
-
-function resumeCarousel() {
-  isCarouselPaused = false;
+  currentSlide = index;
+  updateSlides();
 }
 
 // Auto-Scroll Carousel
 setInterval(() => {
-  if (!isCarouselPaused) {
-    nextSlide();
-  }
+  nextSlide();
 }, 5000);
 
 // Initialize Carousel
-showSlide(currentSlide);
+updateSlides();
+
+
 
 
  
 // Select the input, buttons, and error message container
 const searchInput = document.getElementById('searchInput');
 const searchButton = document.getElementById('searchButton');
-const clearButton = document.getElementById('clearButton');
-const errorMessage = document.getElementById('errorMessage');
+// const clearButton = document.getElementById('clearButton');
+// const errorMessage = document.getElementById('errorMessage');
 
 // Function to handle search
 function handleSearch() {
@@ -351,8 +304,8 @@ function handleSearch() {
 
     if (!found) {
       // If no matches found, display an error message
-      errorMessage.textContent = `No results found for "${query}". Please try again.`;
-      errorMessage.style.display = 'block';
+      // errorMessage.textContent = `No results found for "${query}". Please try again.`;
+      // errorMessage.style.display = 'block';
     }
   } else {
     alert('Please enter a search query.');

@@ -18,6 +18,7 @@
     
   </head>
   <body>
+    <div class="main-wrapper">
     <header>
       <div class="header-top px-2">
         <div class="container">
@@ -110,18 +111,33 @@
           </div>
         </div>
       </div>
-      <div id="header-sticky" class="header-area header-white px-2 pt-2 pb-2 mt-sm-0">
+      <div id="header-middle" class="header-area header-white px-2 pt-2 pb-2 mt-sm-0">
         <div class="container">
           <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid pr-0 pl-0">
               <a class="navbar-brand" href="#" style="flex: 1">
-                <img src="assets/images/logo.svg" alt="logo" loading="lazy" />
+                <img src="assets/images/logo-f.png" alt="logo" loading="lazy" width="100"/>
                 <img
                   src="assets/images/logo-m.png"
                   alt="dummy"
-                  style="width: 50%"
+                  style="width: 40vw; margin-left: 20px;"
+                  
                 />
+                <img src="assets/images/logo.svg" alt="logo" loading="lazy" width="60" style="margin-left: 20px;"/>
+
               </a>
+
+             
+              
+            </div>
+          </nav>
+        </div>
+      </div>
+      <div class="header-top ">
+        <div class="container mexy"  >
+          <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid pr-0 pl-0">
+              
 
               <button
                 class="navbar-toggler"
@@ -143,7 +159,7 @@
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" aria-current="page" href="#abus"
-                      >About Us</a
+                      >About</a
                     >
                   </li>
                   <li class="nav-item dropdown">
@@ -235,26 +251,30 @@
                     </ul>
                   </li>
                 </ul>
-                <!-- <form class="d-flex" role="search">
-                          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                          <button class="btn btn-outline-success" type="submit">Search</button>
-                        </form> -->
+                <form class="d-flex" role="search">
+                          <input id="searchInput" class="form-control col-3 me-3" type="search" placeholder="Search" aria-label="Search">
+                          <button id="searchButton" class="btn col-2" type="submit">🔍</button>
+                        </form>
                 
               </div>
             </div>
           </nav>
         </div>
+          
+        
       </div>
+
+      <div class="header-top " style="background-color: #ED1D24;">
+        <div class="container">
+          <marquee class="font_12px" style="color:rgb(255, 255, 255); background-color:rgba(255, 255, 255, 0);font-family:tahoma;text-decoration:none;" direction="left" width="894" height="19" loop="true" scrollamount="10" onmouseover="this.scrollAmount='0'" onmouseout="this.scrollAmount='10'">•This is the Portal of Indian Railways, developed with an objective to enable a single window access to information and services being provided •            • Contribute your rendering of the National Anthem of India at : https://rashtragaan.in/   </marquee>
+        </div></div>
     </header>
     <div class="main-container">
-      <section id="Skip-to-Main-Content" class="explore">
-        <div class="container position-relative">
-          <div class="explore-effect position-absolute"></div>
-          <div class="explore-effect2 position-absolute"></div>
+      <section id="Skip-to-Main-Content" class="explore" style="margin-top: -60px;">
+        <div class="container position-relative hwl">
+
           <div class="explore_inner position-relative">
-            <div class="explore_head text-center">
-              <span class="rounded-pill">Explore</span>
-            </div>
+           
             <div
               class="services_chip d-flex flex-wrap align-items-center justify-content-center"
             >
@@ -266,7 +286,7 @@
                     </span></span></i
                 >
                 <strong>Layout</strong>
-                <span class="material-symbols-outlined">chevron_right</span>
+                <span class="material-symbols-outlined pe2">chevron_right</span>
               </a>
               <a href="" class="d-flex align-items-center">
                 <i
@@ -274,33 +294,33 @@
                   ><span class="material-symbols-outlined">history_edu</span></i
                 >
                 <strong>Shed History / Glimpses</strong>
-                <span class="material-symbols-outlined">chevron_right</span>
+                <span class="material-symbols-outlined pe1">chevron_right</span>
               </a>
               <a href="" class="d-flex align-items-center">
                 <i
-                  class="icon_7 rounded-circle d-flex align-items-center justify-content-center"
-                  ><span class="material-symbols-outlined">image</span></i
+                  class="icon_1 rounded-circle d-flex align-items-center justify-content-center"
+                  ><span class="material-symbols-outlined" >image</span></i
                 >
                 <strong>Historical Memories</strong>
-                <span class="material-symbols-outlined">chevron_right</span>
+                <span class="material-symbols-outlined pe2" >chevron_right</span>
               </a>
               <a href="" class="d-flex align-items-center">
                 <i
-                  class="icon_3 rounded-circle d-flex align-items-center justify-content-center"
-                  ><span class="material-symbols-outlined">responsive_layout </span></i
+                  class="icon_2 rounded-circle d-flex align-items-center justify-content-center"
+                  ><span class="material-symbols-outlined pe1">responsive_layout </span></i
                 >
                 <strong>Infrastructure</strong>
-                <span class="material-symbols-outlined">chevron_right</span>
+                <span class="material-symbols-outlined pe2">chevron_right</span>
               </a>
               <a href="" class="d-flex align-items-center">
                 <i
-                  class="icon_4 rounded-circle d-flex align-items-center justify-content-center"
-                  ><span class="material-symbols-outlined">
+                  class="icon_1 rounded-circle d-flex align-items-center justify-content-center"
+                  ><span class="material-symbols-outlined ">
                     person_apron
                   </span></i
                 >
                 <strong>Man Power Position</strong>
-                <span class="material-symbols-outlined">chevron_right</span>
+                <span class="material-symbols-outlined pe2">chevron_right</span>
               </a>
               <a href="" class="d-flex align-items-center">
                 <i
@@ -331,67 +351,56 @@
 
               
             </div>
-            <div class="text-center view-all-category">
-              <p class="rounded-pill"><a href="#meme">View the entire range 👉</a></p>
-            </div>
+          
           </div>
+        </div>
+        <div class="tenders">
+          <div class="rounded-pill tenders-title" style="background-color: white; "><span class="glow">Tender</span></div>
+          <ul>
+            <marquee direction="up">
+            <li><a href="#"><span>08/12/24</span> - This is tender 1 which would have some details and shall only be seen in desktop mode</a></li>
+            <li><a href="#"><span>22/10/24</span> - Tender 2 have some detail </a></li>
+            <li><a href="#"><span>22/10/24</span>- Tender - 3</a></li>
+          </marquee>
+          </ul>
         </div>
       </section>
       <div class="right-section">
-    <section class="banner">
-      <div class="tenders">
-        <div class="rounded-pill tenders-title">Tenders</div>
-        <ul>
-          <li><a href="#"><span>08/12/24</span> - This is tender 1 which would have some details and shall only be seen in desktop mode</a></li>
-          <li><a href="#"><span>22/10/24</span> - Tender 2 have some detail </a></li>
-          <li><a href="#"><span>22/10/24</span>- Tender - 3</a></li>
-        </ul>
-      </div>
-      <div class="banner_inner">
-        <div class="banner_content mx-auto">
-          <div class="banner_logo d-flex flex-column align-items-center">
-            <img
-              src="https://pratyush21706.github.io/memo-shade-/logo.jpeg"
-              alt="logo"
-              loading="lazy"
-              height="120"
-              width="120"
-            />
-            <h3>Memu Shed Jhajha</h3>
-            <p>We believe in data transparency and that the Right to Information is a the common public's fundamental right .</p>
-          </div>
-          <div class="banner_search">
-            <br />
-            <div class="banner_search_input rounded-pill">
-              <img
-                src="assets/images/search-2.svg"
-                alt="icon"
-                loading="lazy"
-                width="24"
-                height="24"
-              />
-              <input
-                id="searchInput"
-                type="text"
-                placeholder="Search service"
-              />
-              <button id="clearButton" type="button" class="btn border-0">❌</button>
-              <input
-                id="searchButton"
-                type="submit"
-                class="btn border-0"
-                value="Search"
-              />
+        <section class="image-carousel banner col-6 mb-4">
+          <!-- Carousel Wrapper -->
+          <div class="carousel ">
+            <div class="carousel-slide active">
+              <img src="/assets/images/carousel/3.jpeg" alt="Slide 1"  width="1024px"/>
             </div>
-            <div id="errorMessage" style="color: red; margin-top: 10px; display: none;"></div>
+            <div class="carousel-slide">
+              <img src="/assets/images/carousel/0.jpg" alt="Slide 2" />
+            </div>
+            <div class="carousel-slide">
+              <img src="/assets/images/carousel/1.jpg" alt="Slide 3" />
+            </div>
+            <div class="carousel-slide">
+              <img src="assets\images\carousel\4.jpeg" alt="Slide 4" />
+            </div>
           </div>
-          
-          
-        </div>
-      </div>
-    </section>
-    <section class="services" id="meme">
-      <div class="container">
+        
+          <!-- Navigation Buttons -->
+          <button class="carousel-nav prev" onclick="prevSlide()">&#10094;</button>
+          <button class="carousel-nav next" onclick="nextSlide()">&#10095;</button>
+        
+          <!-- Indicator Dots -->
+          <div class="carousel-indicators">
+            <span class="dot active" onclick="setSlide(0)"></span>
+            <span class="dot" onclick="setSlide(1)"></span>
+            <span class="dot" onclick="setSlide(2)"></span>
+            <span class="dot" onclick="setSlide(2)"></span>
+
+          </div>
+        </section>
+        
+        
+        
+    <section class="services" id="meme" >
+      <div class="container" style="max-width: 85%; margin-left:10%">
        
 
         <div class="services_carousel">
@@ -1051,7 +1060,7 @@
     </section>
     </div></div>
     
-    <section class="our-ministers" id="ppol" style="border-top: solid 1px #C0C0C0; padding-top:30px; margin-top:-100px; width:80%; margin-left:10%">
+    <section class="our-ministers" id="ppol" style=" padding-top:30px; margin-top:-100px; width:100%">
       <div class="container">
         <div class=" explore_head text-center">
           <h3>Our Guiding Light</h3>
@@ -1189,57 +1198,7 @@
 
     
 
-    <section class="gallery" id ="glry">
-      <div class="container">
-        <div class="gallery-header text-center">
-          <span class="rounded-pill">What's New</span>
-          <h3>Our Gallery</h3>
-        </div>
-        <div class="gallery-wrapper">
-          <div class="gallery-nav left">&#10094;</div>
-          <div class="gallery-row">
-            <div class="gallery-item">
-              <img src="https://pratyush21706.github.io/memo-shade-/image4.jpg" alt="Gallery Image 1">
-            </div>
-            <div class="gallery-item">
-              <img src="https://pratyush21706.github.io/memo-shade-/image4.jpg" alt="Gallery Image 2">
-            </div>
-            <div class="gallery-item">
-              <img src="https://pratyush21706.github.io/memo-shade-/image4.jpg" alt="Gallery Image 3">
-            </div>
-            <div class="gallery-item">
-              <img src="https://pratyush21706.github.io/memo-shade-/image4.jpg" alt="Gallery Image 4">
-            </div>
-            <div class="gallery-item">
-              <img src="https://pratyush21706.github.io/memo-shade-/image4.jpg" alt="Gallery Image 5">
-            </div>
-            <div class="gallery-item">
-              <img src="https://pratyush21706.github.io/memo-shade-/image4.jpg" alt="Gallery Image 6">
-            </div>
-            <div class="gallery-item">
-              <img src="https://pratyush21706.github.io/memo-shade-/image4.jpg" alt="Gallery Image 7">
-            </div>
-            <div class="gallery-item">
-              <img src="https://pratyush21706.github.io/memo-shade-/image4.jpg" alt="Gallery Image 8">
-            </div>
-            <div class="gallery-item">
-              <img src="https://pratyush21706.github.io/memo-shade-/image4.jpg" alt="Gallery Image 9">
-            </div>
-            <div class="gallery-item">
-              <img src="https://pratyush21706.github.io/memo-shade-/image4.jpg" alt="Gallery Image 10">
-            </div>
-          </div>
-          <div class="gallery-nav right">&#10095;</div>
-        </div>
-      </div>
-    
-      <!-- Image Modal -->
-      <div class="image-modal">
-        <span class="close">&times;</span>
-        <img class="modal-content" id="modal-img" alt="Modal View">
-      </div>
-    </section>
-    
+   
     
     
     <br><br>
@@ -1522,7 +1481,7 @@
 </div>
 
 
-
+</div>
  
   </body>
 </html>
